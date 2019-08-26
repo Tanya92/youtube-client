@@ -1,0 +1,242 @@
+body {
+    background-color: rgb(4, 77, 77);
+    min-width: 270px;
+}
+
+.search_container {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+}
+
+.button_search {
+    width: 2vw;
+    padding: 0;
+    background-color: transparent;
+    margin-left: 1vw;
+    cursor: pointer;
+}
+
+.icon_search {
+    width: 100%;
+    height: 100%;
+}
+
+.button_search, .input_field {
+    height: 4vw;
+    min-height: 40px;
+    grid-column: 1;
+    grid-row: 1;
+    border: none;
+}
+
+.input_field {
+    background-color: #ffffff;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 0 0 4vw;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.search_results {
+    display: block;
+    width: 90%;
+    margin: 3vw auto 0;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.search_results.active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+}
+
+.search_item_container {
+    display: inline-block;
+    width: 25%;
+    margin-bottom: 2vw;
+}
+
+@media screen and (min-width: 1160px) {
+    .search_item:hover {
+        background-color: #8decb1;
+        transform: translate(15px, 5px);
+        box-shadow: -10px 0px 10px rgb(134, 132, 110);
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 1150px) and (min-width: 900px) {
+    .search_item_container {
+        width: calc(100% / 3);
+    }
+
+    .search_item:hover {
+        background-color: #8decb1;
+        transform: translate(15px, 5px);
+        box-shadow: -10px 0px 10px rgb(134, 132, 110);
+    }
+}
+
+@media screen and (max-width: 899px) and (min-width: 720px) {
+    .search_item_container {
+        width: calc(100% / 2);
+    }
+
+    .search_item:active {
+        background-color: #8decb1;
+        transform: translate(15px, 5px);
+        box-shadow: -10px 0px 10px rgb(134, 132, 110);
+    }
+
+    .button_search {
+      width: 30px;
+    }
+
+    .input_field {
+      padding-left: 40px;
+    }
+}
+
+@media screen and (max-width: 719px){
+    .search_item_container {
+        width: 100%;
+    }
+
+    .button_search {
+    width: 30px;
+    }
+
+    .input_field {
+    padding-left: 40px;
+    }
+}
+
+.search_item {
+    display: grid;
+    width: 90%;
+    height: 70vh;
+    min-height: 460px;
+    max-height: 600px;
+    max-width: 270px;
+    background-color: aliceblue;
+    justify-self: center;
+    border-radius: 10px;
+    align-content: flex-start;
+    transition: 0.2s;
+    white-space: normal;
+    font-size: 1rem;
+    margin: 0 auto;
+}
+
+
+
+.imageSrc {
+    width: 100%;
+    height: 25vh;
+    max-height: 185px;
+    padding-top: 10px;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.imageSrc, .title {
+    grid-row:1;
+    grid-column:1;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    background-color: #085023;
+    align-self: center;
+}
+
+.youtube_page {
+    color: #ffffff;
+}
+
+.information {
+    display: grid;
+    width: 80%;
+    grid-template-columns: 20% 80%;
+    padding-left: 10px;
+}
+
+.icon_img {
+    width: 70%;
+    justify-self: center;
+    align-self: center;
+    grid-column: 1;
+}
+
+.info_text {
+    text-align: center;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.description {
+    width: 90%;
+    display: block;
+    padding: 0 10px;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+.button_container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.nav_button {
+    border-radius: 50%;
+    position: relative;
+    border: 2px solid #e63905;
+    outline: none;
+}
+
+.nav_button:hover {
+    background-color: rgb(243, 181, 99);
+    cursor: pointer;
+}
+
+.nav_button.current {
+    background-color: #d17621;
+}
+
+.nav_button, .tooltip {
+    width:  3vw;
+    min-width: 30px;
+    min-height: 30px;
+    height: 3vw;
+    margin-right: 10px;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 3vw;
+    left: 0;
+    background-color: rgb(231, 240, 116);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25%;
+    font-weight: bold;
+}
+
+.tooltip_container {
+    opacity: 0.7;
+}
+
